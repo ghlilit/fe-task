@@ -1,10 +1,13 @@
 body{
-  color: white;
+  font-size: 18px;
   font-family: Proxima Nova;
-}
-.container {
-  padding: 95px 250px;
+  color: white;
   text-align: center;
+}
+.header {
+  display: grid;
+  justify-items: center;
+  padding: 95px 0px;
   background-image: linear-gradient(45deg, #29116d, #5c4789);
 }
 
@@ -17,8 +20,41 @@ body{
 
 .header-text > :last-child{
   margin-top: 35px;
+  font-size: 1rem;
 }
 
 .header img {
-  height: 25px;
+  height: 35px;
+}
+
+.header-text {
+  width: 50%;
+}
+
+.trusted-by {
+  margin: 100px 0;
+}
+
+.our-clients{
+  min-height: 180px;
+  max-height: 180px;
+}
+
+.our-clients img{
+  display: none;
+  max-height: 80px;
+  max-width: 80px;
+  margin: 50px 40px;
+}
+
+.trusted-by p{
+  font-size: 1.25rem;
+  color: black;
+}
+
+.tilted-background {
+  background-image: linear-gradient(45deg, #29116d, #5c4789);
+  min-height: 60vh;
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 }
