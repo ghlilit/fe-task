@@ -10,52 +10,115 @@
 
     <title>Joomag &#9829; Wework</title>
   </head>
-  <body>
-    <section class="header">
+  <body >
+    <header class="header">
       <img src="assets/logo/joomag-love-wework.svg" alt="Joomag &#9829; Wework">
       <div class="header-text">
         <p>Drive innovation and transform your business into an immersive, interactive experience.</p>
         <p>Realize your vision with Joomag’s all-in-one platform. Use it to create dynamic interactive content without the need of developers. Then distribute it across the globe and measure your performance with need-to-know analytics.</p>
       </div>
-    </section>
+    </header>
 
     <section class="trusted-by">
       <p>Trusted by 500.000+ businesses worldwide</p>
       <div class="our-clients">
-        <img src="assets/trusted-by/walmart.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/bbb.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/ernest-brothers.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/warner-brothers.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/mini.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/levis.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/marriott.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/remax.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/jll.svg" alt="Joomag &#9829; Wework">
-        <img src="assets/trusted-by/costa-coffee.svg" alt="Joomag &#9829; Wework">
+        <img src="assets/trusted-by/walmart.svg" alt="walmart logo">
+        <img src="assets/trusted-by/bbb.svg" alt="bbb logo">
+        <img src="assets/trusted-by/ernest-brothers.svg" alt="ernest-brothers logo">
+        <img src="assets/trusted-by/warner-brothers.svg" alt="warner-brothers logo">
+        <img src="assets/trusted-by/mini.svg" alt="mini logo">
+        <img src="assets/trusted-by/marriott.svg" alt="marriott logo">
+        <img src="assets/trusted-by/jll.svg" alt="jll logo">
+        <img src="assets/trusted-by/remax.svg" alt="reimax logo">
+        <img src="assets/trusted-by/levis.svg" alt="levis logo">
+        <img src="assets/trusted-by/costa-coffee.svg" alt="costa-coffee logo">
       </div>
     </section>
 
-    <section class="tilted-background">
-
+    <section class="exclusive-offer">
+      <figure class="wework-img"></figure>
+      <div class="shadow-box">
+        <p class="lead-text">Exclusive Wework offer</p>
+        <p class="small-text">WeWork members only can now enjoy Joomag alongside a special 30% discount.</p>
+        <div>
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="email" class="sr-only">Password</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Work Email">
+            </div>
+            <button type="submit" class="btn btn-primary">Try Joomag for Free</button>
+          </form>
+        </div>
+      </div>
     </section>
 
+    <section class="features">
+      <div class="feature feature-even row">
+        <img class="col-md-6" src="assets/features/creation.svg" alt="creation"/>
+        <div class="feature-text col-md-6">
+          <p>Creation</p>
+          <p>
+            It's easy to create anything when you have options. Start from scratch, choose from over 300
+            masterfully designed templates, or upload a PDF file to get started.
+          </p>
+        </div>
+      </div>
+      <div class="feature feature-odd row">
+        <img class="col-md-6" src="assets/features/lead-generation.svg" alt="lead-generation"/>
+        <div class="feature-text col-md-6">
+          <p>Lead Generation</p>
+          <p>
+            Keep the sales process moving and use our powerful tools to generate more qualified leads.
+          </p>
+        </div>
+      </div>
+      <div class="feature feature-even row">
+        <img class="col-md-6" src="assets/features/collaboration.svg" alt="collaboration"/>
+        <div class="feature-text col-md-6">
+          <P>Collaboration</P>
+          <p>
+            Work towards a common goal and let every employee access your interactive content.
+          </p>
+        </div>
+      </div>
+      <div class="feature feature-odd row">
+        <img class="col-md-6" src="assets/features/distribution.svg" alt="distribution"/>
+        <div class="feature-text col-md-6">
+          <p>Distribution</p>
+          <p>
+            Web, mobile, desktop, social media, mobile apps - use them all (and more) to inflate your
+            content's visibility with Joomag.
+          </p>
+        </div>
+      </div>
+      <div class="feature feature-even row">
+        <img class="col-md-6" src="assets/features/analytics.svg" alt="analytics"/>
+        <div class="feature-text col-md-6">
+          <p>Analytics</p>
+          <p>
+            Are readers engaged with your content? Where are they accessing it from? And which sources are
+            driving the most traffic? Get these questions (and more) answered with Joomag's comprehensive
+            analytics.
+          </p>
+        </div>
+      </div>
+      </section>
+
+      <footer class="footer">
+        <p>Work hard, save hard. All WeWork members will receive an exclusive 30% discount when enrolling
+            in a Joomag Business plan. 
+        </p>
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="email" class="sr-only">Password</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Work Email">
+          </div>
+          <button type="submit" class="btn btn-primary">Try Joomag for Free</button>
+        </form>
+        <p class="disclaimer">*Only WeWork members. 1st year only.</p>
+      </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-
-      let keepFading = (start, prevWidth) => {
-        let currentWidth = $( window ).width();
-        let interval = currentWidth > 1000 ? 5 : 2;
-        prevWidth !== currentWidth ? start = 0 : '';
-        
-        let elements = $('.our-clients img').slice(start, start + interval);
-        elements.fadeIn(1500);
-        elements.fadeOut(1500);
-
-        setTimeout(() => { keepFading((start + interval) % 10, currentWidth);
-          }, 3000);
-      }
-
-      keepFading(0, $( window ).width());
-    </script>
+    <script src="animation.js"></script>
   </body>
 </html>
