@@ -1,6 +1,6 @@
 let keepFading = (start, prevWidth) => {
     let currentWidth = $( window ).width();
-    let interval = currentWidth > 768 ? 5 : 2;
+    let interval = currentWidth > 820 ? 5 : 2;
     prevWidth !== currentWidth ? start = 0 : '';
     
     let elements = $('.our-clients img').slice(start, start + interval);
