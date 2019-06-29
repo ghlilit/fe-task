@@ -12,23 +12,33 @@
   font-weight: bold;
 }
 
-body {
+.hideme{
+  opacity: 0;
+}
+
+body{
   color: white;
   font-family: Proxima Nova;
   text-align: center;
 }
 
-.header {
+.header{
   background-image: @gradient;
   display: grid;
   justify-items: center;
   padding: 95px 0px;
 
-  img {
+  img{
     height: 35px;
+    opacity: 0;
   }
-  .header-text {
+  .logo{
+    background-image: url("../assets/logo/joomag-love-wework.svg");
+    background-repeat: no-repeat;
+  }
+  .header-text{
     width: 50%;
+  }
 
   & >:first-child{
       line-height: 1.2em;
@@ -40,7 +50,6 @@ body {
       margin-top: 35px;
     }
   }
-}
 
 .trusted-by{
   margin: 100px 0 60px;
@@ -48,30 +57,31 @@ body {
   p{
     color: black;
     font-size: 1.25rem;
+    padding: 1rem;
   }
   .our-clients{
     height: 180px;
     img{
       display: none;
       margin: 50px 40px;
-      max-height: 80px;
-      max-width: 80px;
+      max-height: 5rem;
+      max-width: 5rem;
     }
   }
 }
 
 .exclusive-offer{
-  min-height: 70vh;
+  min-height: 30rem;
   position: relative;
 
-  .tilted-background {
+  .tilted-background{
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-    min-height: 70vh;
+    min-height: 30rem;
     position: absolute;
     width: 100%;
   }
-  .wework-img {
+  .wework-img{
     background-image: url("../assets/background/image-we-work.jpg");
     background-size: cover;
     .tilted-background()
@@ -79,7 +89,7 @@ body {
   .shadow-box{
     background-image: @gradient;
     opacity: 0.9;
-    
+
     .small-text{
       margin: 35px;
     }
@@ -93,22 +103,23 @@ body {
 
 .features{
   img{
-    max-height: 155px;
+    max-height: 10rem;
   }
   .feature{
     color: black;
     margin: 100px 20vw;
-    opacity: 0;
   }
   .feature-even{
     text-align: left;
+    .feature()
   }
   .feature-odd{
     flex-direction: row-reverse;
     text-align: right;
+    .feature()
   }
   .feature-text{
-    padding: 25px;
+    padding: 1rem;
     & :first-child{
       margin-bottom: 5px;
       .lead-text()
@@ -120,7 +131,8 @@ body {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   background-image: @gradient;
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-  height: 60vh;
+  min-height: 20rem;
+  padding: 8rem;
 
   p{
     max-width: 40%;
@@ -132,4 +144,39 @@ body {
     font-size: 0.85rem;
   }
   .centered-flex()
+}
+
+@media (max-width: 768px) {
+  html{
+    font-size: 14px;
+  }
+  .header-text {
+    width: 80%;
+  }
+  .features {
+    .feature-even{
+      text-align: center;
+    }
+    .features .feature-odd{
+      text-align: center;
+    }
+  }
+  .form-inline{
+    flex-direction: column;
+    & :first-child{
+      margin: 10px;
+    }
+  }
+  .footer{
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .header .logo{
+    background-image: url(../assets/logo/joomag-love-wework-mobile.svg)
+  }
+  .footer p{
+    max-width: 90%;
+  }
 }
